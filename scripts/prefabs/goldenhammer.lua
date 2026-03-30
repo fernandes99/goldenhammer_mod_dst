@@ -1,16 +1,17 @@
 local assets = {
-    Asset("ATLAS", "images/inventoryimages/goldenhammer.xml"), 
     Asset("ANIM", "anim/goldenhammer.zip"),
-    Asset("ANIM", "anim/swap_hammer.zip"),
+    Asset("ANIM", "anim/swap_goldenhammer.zip"),
+    Asset("ATLAS", "images/inventoryimages/goldenhammer.xml"), 
 }
 
 local function onequip(inst, owner)
-    owner.AnimState:OverrideSymbol("swap_object", "swap_hammer", "swap_hammer")
+    owner.AnimState:OverrideSymbol("swap_object", "swap_goldenhammer", "swap_object")
     owner.AnimState:Show("ARM_carry") 
     owner.AnimState:Hide("ARM_normal") 
 end
 
 local function onunequip(inst, owner) 
+    owner.AnimState:ClearOverrideSymbol("swap_object")
     owner.AnimState:Hide("ARM_carry") 
     owner.AnimState:Show("ARM_normal") 
 end

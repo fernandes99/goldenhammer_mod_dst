@@ -1,6 +1,6 @@
 -- modinfo.lua
 
-name = "Golden Hammer"
+name = "Golden Hammer - 100% loot drop"
 
 description = [[
 A powerful golden hammer that guarantees 100% loot drops.

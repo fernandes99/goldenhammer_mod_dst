@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
     <folder id="0">
-        <file id="0" name="goldenhammer.png" width="500" height="500" pivot_x="0" pivot_y="1"/>
+        <file id="0" name="goldenhammer.png" width="224" height="224" pivot_x="0" pivot_y="1"/>
     </folder>
     <entity id="0" name="goldenhammer">
         <animation id="0" name="idle" length="1000" interval="100">
@@ -12,7 +12,7 @@
             </mainline>
             <timeline id="0" name="goldenhammer">
                 <key id="0" spin="0">
-                    <object folder="0" file="0" x="2.001996" y="-1.045908" pivot_x="0.498004" pivot_y="0.545908"/>
+                    <object folder="0" file="0" x="3.436514" y="-32.582197" pivot_x="0.511762" pivot_y="0.323577"/>
                 </key>
             </timeline>
         </animation>

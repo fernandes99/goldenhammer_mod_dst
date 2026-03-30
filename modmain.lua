@@ -7,7 +7,9 @@ PrefabFiles = {
 Assets = {
     Asset("ATLAS", "images/inventoryimages/goldenhammer.xml"),
     Asset("IMAGE", "images/inventoryimages/goldenhammer.tex"),
+    
     Asset("ANIM", "anim/goldenhammer.zip"),
+    Asset("ANIM", "anim/swap_goldenhammer.zip"),
 }
 
 AddRecipe2(
@@ -20,7 +22,7 @@ AddRecipe2(
     {
         atlas = "images/inventoryimages/goldenhammer.xml",
     },
-    { "CHARACTER" }
+    { "TOOL" }
 )
 
 GLOBAL.STRINGS.RECIPE_DESC.GOLDENHAMMER = "TESTE";
