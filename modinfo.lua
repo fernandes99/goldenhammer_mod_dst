@@ -1,22 +1,18 @@
 -- modinfo.lua
 
-name = "Golden Hammer - 100% loot drop"
+name = "Golden Hammer - 100% Loot Recovery"
 
 description = [[
-A powerful golden hammer that guarantees 100% loot drops.
+Tired of losing half of your precious resources when deconstructing structures? The Golden Hammer is the ultimate tool for architects and survivors who refuse to waste a single twig!
 
-Tired of losing resources when hammering structures?
-With the Golden Hammer, everything drops — no more 50% loss.
-
-Perfect for builders and perfectionists.
+Unlike the standard hammer, which only returns 50% of materials, this luxury tool ensures that 100% of the resources drop back to your inventory or the ground. It is the perfect tool for those who love to reorganize their base without paying the "resource tax" of the Constant.
 ]]
 
 author = "Roberto Fernandes"
-version = "1.0.0"
+version = "1.0.3"
 
-icon_atlas = "goldenhammer.xml"
-icon = "goldenhammer.tex"
-
+icon_atlas = "modicon.xml"
+icon = "modicon.tex"
 
 -- Compatibilidade
 dst_compatible = true

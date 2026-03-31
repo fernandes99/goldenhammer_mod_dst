@@ -7,7 +7,7 @@ PrefabFiles = {
 Assets = {
     Asset("ATLAS", "images/inventoryimages/goldenhammer.xml"),
     Asset("IMAGE", "images/inventoryimages/goldenhammer.tex"),
-    
+
     Asset("ANIM", "anim/goldenhammer.zip"),
     Asset("ANIM", "anim/swap_goldenhammer.zip"),
 }
@@ -18,14 +18,24 @@ AddRecipe2(
         Ingredient("goldnugget", 6),
         Ingredient("twigs", 2),
     },
-    GLOBAL.TECH.NONE,
+    GLOBAL.TECH.SCIENCE_ONE,
     {
         atlas = "images/inventoryimages/goldenhammer.xml",
     },
-    { "TOOL" }
+    {"TOOLS", "STRUCTURES"}
 )
 
-GLOBAL.STRINGS.RECIPE_DESC.GOLDENHAMMER = "TESTE";
+GLOBAL.STRINGS.NAMES.GOLDENHAMMER = "Golden Hammer"
+GLOBAL.STRINGS.RECIPE_DESC.GOLDENHAMMER = "Recover 100% of your building materials."
+
+-- GLOBAL.STRINGS.CHARACTERS.GENERIC.DESCRIBE.GOLDENHAMMER = "It's shiny and efficient!"
+-- GLOBAL.STRINGS.CHARACTERS.WIGFRID.DESCRIBE.GOLDENHAMMER = "A hammer fit for a golden hall!"
+-- GLOBAL.STRINGS.CHARACTERS.WILLOW.DESCRIBE.GOLDENHAMMER = "I'd rather burn things, but this is okay too."
+-- GLOBAL.STRINGS.CHARACTERS.WENDY.DESCRIBE.GOLDENHAMMER = "It brings back what was lost... if only everything were that simple."
+-- GLOBAL.STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.GOLDENHAMMER = "Is shiny and strong! Makes big smash without losing tiny pieces!"
+-- GLOBAL.STRINGS.CHARACTERS.WX78.DESCRIBE.GOLDENHAMMER = "EFFICIENT RECYCLING TOOL DETECTED"
+-- GLOBAL.STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.GOLDENHAMMER = "A gilded instrument for optimal material conservation."
+
 
 AddPrefabPostInitAny(function(inst)
     if not GLOBAL.TheWorld.ismastersim then return end

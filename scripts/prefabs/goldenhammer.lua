@@ -4,6 +4,9 @@ local assets = {
     Asset("ATLAS", "images/inventoryimages/goldenhammer.xml"), 
 }
 
+local GOLDEN_HAMMER_USES = 150
+local HAMMER_EFFICIENCY = 2
+
 local function onequip(inst, owner)
     owner.AnimState:OverrideSymbol("swap_object", "swap_goldenhammer", "swap_object")
     owner.AnimState:Show("ARM_carry") 
@@ -53,14 +56,14 @@ local function fn()
     inst:AddComponent("inspectable")
 
     inst:AddComponent("tool")
-    inst.components.tool:SetAction(ACTIONS.HAMMER)
+    inst.components.tool:SetAction(ACTIONS.HAMMER, HAMMER_EFFICIENCY)
 
     inst:AddComponent("weapon")
     inst.components.weapon:SetDamage(10)
 
     inst:AddComponent("finiteuses")
-    inst.components.finiteuses:SetMaxUses(200)
-    inst.components.finiteuses:SetUses(200)
+    inst.components.finiteuses:SetMaxUses(GOLDEN_HAMMER_USES)
+    inst.components.finiteuses:SetUses(GOLDEN_HAMMER_USES)
     inst.components.finiteuses:SetOnFinished(inst.Remove)
 
     inst:AddComponent("equippable")
