@@ -9,7 +9,7 @@ Unlike the standard hammer, which only returns 50% of materials, this luxury too
 ]]
 
 author = "Roberto Fernandes"
-version = "1.0.3"
+version = "1.0.4"
 
 icon_atlas = "modicon.xml"
 icon = "modicon.tex"
