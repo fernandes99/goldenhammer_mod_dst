@@ -61,13 +61,13 @@ AddPrefabPostInitAny(function(inst)
                 
                 -- 1. Salva a função original de drop para não quebrar o objeto para sempre e prevenir crashes
                 local old_DropLoot = inst.components.lootdropper.DropLoot
-                
-                -- 2. "Sobrepõe" o DropLoot original para ele não spawnar nada
-                inst.components.lootdropper.DropLoot = function() end
 
-                -- 3. Lógica customizada: Dropa 100% da receita
+                -- 2. Lógica customizada: Dropa 100% da receita
                 local recipe = GLOBAL.GetValidRecipe(inst.prefab) or GLOBAL.AllRecipes[inst.prefab]
                 if recipe and recipe.ingredients then
+                    -- 3. "Sobrepõe" o DropLoot original para ele não spawnar nada
+                    inst.components.lootdropper.DropLoot = function() end
+
                     for _, ingredient in ipairs(recipe.ingredients) do
                         for i = 1, ingredient.amount do
                             local item = GLOBAL.SpawnPrefab(ingredient.type)
