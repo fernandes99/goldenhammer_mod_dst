@@ -65,6 +65,7 @@ local function fn()
     inst.components.finiteuses:SetMaxUses(GOLDEN_HAMMER_USES)
     inst.components.finiteuses:SetUses(GOLDEN_HAMMER_USES)
     inst.components.finiteuses:SetOnFinished(inst.Remove)
+    inst.components.finiteuses:SetConsumption(ACTIONS.HAMMER, 1)
 
     inst:AddComponent("equippable")
     inst.components.equippable:SetOnEquip(onequip)
